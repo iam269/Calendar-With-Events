@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar cu Evenimente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="schedule.png">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button class="nav-btn" id="prev-month-btn">&lt;</button>
+                <div class="current-date" id="current-month-year"></div>
+                <button class="nav-btn" id="next-month-btn">&gt;</button>
+            </div>
+            <div class="weekdays">
+                <div>Dum</div>
+                <div>Lun</div>
+                <div>Mar</div>
+                <div>Mie</div>
+                <div>Joi</div>
+                <div>Vin</div>
+                <div>Sâm</div>
+            </div>
+            <div class="days-grid" id="calendar-days"></div>
+        </div>
+        <div class="events">
+            <h2>Adaugă un Eveniment</h2>
+            <div class="event-date" id="event-selected-date">Selectează o zi</div>
+            <input type="text" id="event-title-input" placeholder="Titlul evenimentului">
+            <button id="add-event-btn">Adaugă Eveniment</button>
+            <hr>
+            <h3>Evenimente Programate</h3>
+            <ul id="events-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

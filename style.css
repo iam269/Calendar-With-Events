@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+}
+
+.calendar {
+    width: 60%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #ddd;
+}
+
+.weekdays, .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.weekdays div {
+    text-align: center;
+    font-weight: 500;
+    color: #888;
+    padding-bottom: 10px;
+}
+
+.days-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+
+.days-grid div:hover:not(.inactive) {
+    background: #efefef;
+}
+
+.days-grid .inactive {
+    color: #ccc;
+    cursor: default;
+}
+
+.days-grid .today {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.days-grid .selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.days-grid .event-dot {
+    position: absolute;
+    bottom: 5px;
+    width: 6px;
+    height: 6px;
+    background-color: #dc3545;
+    border-radius: 50%;
+}
+
+.events {
+    width: 40%;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+
+.events h2, .events h3 {
+    margin-bottom: 15px;
+}
+
+.event-date {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#event-title-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#add-event-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#add-event-btn:hover {
+    background: #218838;
+}
+
+#events-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#events-list li {
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
